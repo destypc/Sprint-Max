@@ -6,7 +6,6 @@
 
 Um e-commerce esportivo moderno, responsivo e visualmente premium desenvolvido com foco em performance, experiência do usuário e design profissional.
 
-<img src="./assets/img/preview.png" width="100%" alt="SprintMax Preview"/>
 
 <br>
 
