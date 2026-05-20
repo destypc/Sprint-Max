@@ -1,270 +1,951 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SprintMax — Loja de Esportes</title>
-  <link rel="stylesheet" href="estilos/style.css" />
-</head>
-<body>
-
-
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <svg class="logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="21" cy="21" r="21" fill="#e8501a"/>
-        <path d="M10 26 C14 18, 20 15, 26 18 C30 20, 32 16, 34 14" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-        <circle cx="21" cy="21" r="4.5" fill="white"/>
-        <path d="M8 30 L34 30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-      </svg>
-      <span class="logo-text">Sprint<span>Max</span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SprintMax — Loja de Esportes Premium</title>
+    <meta
+      name="description"
+      content="SprintMax - Equipamentos esportivos de alta performance. Frete gratis acima de R$299. Parcele em ate 12x."
+    />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" id="announcementBar">
+      <div class="announcement-track">
+        <span
+          >🔥 Frete GRÁTIS acima de R$299 &nbsp;|&nbsp; ✨ Use SPRINT10 para 10%
+          OFF &nbsp;|&nbsp; 🏆 Parcele em até 12x sem juros &nbsp;|&nbsp; 🚀
+          Entrega expressa em São Paulo &nbsp;|&nbsp; 🔥 Frete GRÁTIS acima de
+          R$299 &nbsp;|&nbsp; ✨ Use SPRINT10 para 10% OFF &nbsp;|&nbsp; 🏆
+          Parcele em até 12x sem juros &nbsp;|&nbsp; 🚀 Entrega expressa em São
+          Paulo</span
+        >
+      </div>
+      <button
+        class="announcement-close"
+        onclick="
+          document.getElementById('announcementBar').style.display = 'none'
+        "
+        aria-label="Fechar"
+      >
+        &#x2715;
+      </button>
     </div>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#categorias">Categorias</a>
-      <a href="#ofertas">Ofertas</a>
-    </nav>
-    <div class="header-actions">
-      <button class="btn-cart">🛒 Carrinho (0)</button>
-    </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <span class="hero-tag">Nova Coleção 2025</span>
-      <h1>Supere seus <span>limites</span> com o equipamento certo</h1>
-      <p>Do treino ao pódio, a SprintMax tem tudo que você precisa para ir mais longe. Produtos de alta performance para cada modalidade.</p>
-      <div class="hero-buttons">
-        <button class="btn-primary">Ver Produtos</button>
-        <button class="btn-secondary">Nossas Ofertas</button>
-      </div>
-    </div>
-    <div class="hero-image">
-      <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
-        <!-- Tênis estilizado -->
-        <ellipse cx="130" cy="200" rx="100" ry="12" fill="rgba(255,255,255,0.06)"/>
-        <!-- Sola -->
-        <rect x="40" y="170" width="160" height="22" rx="10" fill="#c43d10"/>
-        <!-- Corpo do tênis -->
-        <path d="M40 170 C40 140, 55 120, 90 115 L180 112 C205 112, 210 130, 200 170 Z" fill="#ffffff"/>
-        <!-- Detalhe lateral -->
-        <path d="M75 140 L160 135 C175 134, 185 142, 180 155 L75 158 Z" fill="#e8501a" opacity="0.85"/>
-        <!-- Cadarço -->
-        <path d="M95 125 L95 160 M115 122 L115 158 M135 121 L135 157 M155 121 L155 157" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
-        <path d="M95 130 L115 127 M115 133 L135 130 M135 130 L155 127 M95 142 L115 140 M115 140 L135 138 M135 138 L155 137 M95 154 L115 152 M115 152 L135 151 M135 151 L155 150" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-        <!-- Detalhe traseiro -->
-        <rect x="35" y="130" width="16" height="40" rx="6" fill="#e8501a"/>
-        <rect x="38" y="133" width="10" height="34" rx="4" fill="#c43d10"/>
-        <!-- Logo no tênis -->
-        <path d="M155 145 C162 140, 170 138, 178 140 C182 141, 183 144, 181 146 C175 148, 162 148, 155 145 Z" fill="#1a1a2e" opacity="0.3"/>
-        <!-- Elementos decorativos -->
-        <circle cx="60" cy="60" r="3" fill="rgba(232,80,26,0.4)"/>
-        <circle cx="200" cy="50" r="5" fill="rgba(232,80,26,0.3)"/>
-        <circle cx="220" cy="90" r="2.5" fill="rgba(255,255,255,0.2)"/>
-        <circle cx="30" cy="100" r="4" fill="rgba(255,255,255,0.15)"/>
-        <path d="M190 30 L195 45 L210 45 L198 54 L202 69 L190 60 L178 69 L182 54 L170 45 L185 45 Z" fill="rgba(232,80,26,0.25)"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- CATEGORIAS -->
-  <section class="categories" id="categorias">
-    <div class="section-title">Categorias</div>
-    <div class="section-subtitle">Encontre produtos para sua modalidade favorita</div>
-    <div class="categories-grid">
-      <div class="category-card"><span class="category-icon">👟</span><span class="category-name">Corrida</span></div>
-      <div class="category-card"><span class="category-icon">⚽</span><span class="category-name">Futebol</span></div>
-      <div class="category-card"><span class="category-icon">🏋️</span><span class="category-name">Academia</span></div>
-      <div class="category-card"><span class="category-icon">🏊</span><span class="category-name">Natação</span></div>
-      <div class="category-card"><span class="category-icon">🚴</span><span class="category-name">Ciclismo</span></div>
-      <div class="category-card"><span class="category-icon">🎾</span><span class="category-name">Tênis</span></div>
-      <div class="category-card"><span class="category-icon">🏀</span><span class="category-name">Basquete</span></div>
-      <div class="category-card"><span class="category-icon">🥊</span><span class="category-name">Artes Marciais</span></div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS EM DESTAQUE -->
-  <section class="products" id="ofertas">
-    <div class="products-header">
-      <div>
-        <div class="section-title">Produtos em Destaque</div>
-        <div class="section-subtitle">Os mais vendidos desta semana</div>
-      </div>
-      <a href="#">Ver todos →</a>
-    </div>
-    <div class="products-grid">
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Tênis de corrida" />
-        <div class="product-info">
-          <span class="product-badge badge-novo">Novo</span>
-          <div class="product-name">Tênis AeroRun Pro</div>
-          <div class="product-brand">SprintMax</div>
-          <div class="product-price">
-            <span class="price-current">R$ 389,90</span>
-            <span class="price-old">R$ 499,90</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80" alt="Bola de futebol" />
-        <div class="product-info">
-          <span class="product-badge badge-oferta">Oferta</span>
-          <div class="product-name">Bola Campo Pro X</div>
-          <div class="product-brand">Penalty</div>
-          <div class="product-price">
-            <span class="price-current">R$ 129,90</span>
-            <span class="price-old">R$ 179,90</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=500&q=80" alt="Camiseta de corrida" />
-        <div class="product-info">
-          <span class="product-badge badge-destaque">Destaque</span>
-          <div class="product-name">Camiseta Dry-Fit Ultra</div>
-          <div class="product-brand">SprintMax</div>
-          <div class="product-price">
-            <span class="price-current">R$ 89,90</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&q=80" alt="Halteres academia" />
-        <div class="product-info">
-          <span class="product-badge badge-oferta">Oferta</span>
-          <div class="product-name">Kit Halteres 10kg</div>
-          <div class="product-brand">IronFit</div>
-          <div class="product-price">
-            <span class="price-current">R$ 219,90</span>
-            <span class="price-old">R$ 280,00</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1560243563-062bfc001d68?w=500&q=80" alt="Óculos de natação" />
-        <div class="product-info">
-          <span class="product-badge badge-novo">Novo</span>
-          <div class="product-name">Óculos Aqua Vision</div>
-          <div class="product-brand">Speedo</div>
-          <div class="product-price">
-            <span class="price-current">R$ 74,90</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1623874514711-0f321325f318?w=500&q=80" alt="Raquete de tênis" />
-        <div class="product-info">
-          <span class="product-badge badge-destaque">Destaque</span>
-          <div class="product-name">Raquete Control 300</div>
-          <div class="product-brand">Wilson</div>
-          <div class="product-price">
-            <span class="price-current">R$ 349,90</span>
-            <span class="price-old">R$ 420,00</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1591291621164-2c6367723315?w=500&q=80" alt="Garrafa esportiva" />
-        <div class="product-info">
-          <span class="product-badge badge-novo">Novo</span>
-          <div class="product-name">Garrafa Thermo 750ml</div>
-          <div class="product-brand">HydroMax</div>
-          <div class="product-price">
-            <span class="price-current">R$ 59,90</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80" alt="Luva de boxe" />
-        <div class="product-info">
-          <span class="product-badge badge-oferta">Oferta</span>
-          <div class="product-name">Luva de Boxe 14oz</div>
-          <div class="product-brand">Everlast</div>
-          <div class="product-price">
-            <span class="price-current">R$ 189,90</span>
-            <span class="price-old">R$ 240,00</span>
-          </div>
-          <button class="btn-add">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BANNER PROMO -->
-  <div class="promo-banner">
-    <div class="promo-text">
-      <h2>Frete grátis em compras acima de R$ 299</h2>
-      <p>Use o cupom <strong>SPRINT10</strong> e ganhe 10% de desconto na primeira compra</p>
-    </div>
-    <button class="promo-cta">Aproveitar agora</button>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <svg width="36" height="36" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="21" cy="21" r="21" fill="#e8501a"/>
-            <path d="M10 26 C14 18, 20 15, 26 18 C30 20, 32 16, 34 14" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-            <circle cx="21" cy="21" r="4.5" fill="white"/>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="header-inner">
+        <a href="#" class="nav-logo">
+          <svg width="38" height="38" viewBox="0 0 42 42" fill="none">
+            <circle cx="21" cy="21" r="21" fill="#e8501a" />
+            <path
+              d="M10 26 C14 18, 20 15, 26 18 C30 20, 32 16, 34 14"
+              stroke="white"
+              stroke-width="2.8"
+              stroke-linecap="round"
+              fill="none"
+            />
+            <circle cx="21" cy="21" r="4.5" fill="white" />
+            <path
+              d="M8 30 L34 30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              opacity="0.5"
+            />
           </svg>
-          <span class="logo-text">Sprint<span>Max</span></span>
-        </div>
-        <p>Sua loja de artigos esportivos com os melhores preços e qualidade garantida.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Produtos</h4>
-        <ul>
-          <li><a href="#">Corrida</a></li>
-          <li><a href="#">Futebol</a></li>
-          <li><a href="#">Academia</a></li>
-          <li><a href="#">Natação</a></li>
-          <li><a href="#">Ciclismo</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Empresa</h4>
-        <ul>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Trabalhe conosco</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Ajuda</h4>
-        <ul>
-          <li><a href="#">Minha conta</a></li>
-          <li><a href="#">Trocas e devoluções</a></li>
-          <li><a href="#">Rastrear pedido</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 SprintMax. Todos os direitos reservados.</span>
-      <span>CNPJ: 00.000.000/0001-00</span>
-    </div>
-  </footer>
+          <div class="nav-logo-text">
+            <span class="brand">SprintMax</span>
+            <span class="tagline">Sports &amp; Performance</span>
+          </div>
+        </a>
 
-</body>
+        <nav class="nav-links" id="navLinks">
+          <a href="#inicio">Início</a>
+          <div class="nav-dropdown">
+            <a href="#categorias" class="nav-drop-trigger"
+              >Categorias
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path
+                  d="M1 1l5 5 5-5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item"><span>👟</span> Corrida</a>
+              <a href="#" class="dropdown-item"><span>⚽</span> Futebol</a>
+              <a href="#" class="dropdown-item"><span>🏋️</span> Academia</a>
+              <a href="#" class="dropdown-item"><span>🏊</span> Natação</a>
+              <a href="#" class="dropdown-item"><span>🚴</span> Ciclismo</a>
+              <a href="#" class="dropdown-item"><span>🎾</span> Tênis</a>
+              <a href="#" class="dropdown-item"><span>🏀</span> Basquete</a>
+              <a href="#" class="dropdown-item"
+                ><span>🥊</span> Artes Marciais</a
+              >
+            </div>
+          </div>
+          <a href="#ofertas">Produtos</a>
+          <a href="#flashsale">Flash Sale 🔥</a>
+          <a href="#footer">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="searchToggle" aria-label="Pesquisar">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <button
+            class="icon-btn"
+            id="wishlistBtn"
+            aria-label="Lista de desejos"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+              />
+            </svg>
+            <span class="header-badge" id="wishlistCount" style="display: none"
+              >0</span
+            >
+          </button>
+          <button class="cart-btn" id="cartBtn" aria-label="Carrinho">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span class="cart-label">Carrinho</span>
+            <span class="header-badge" id="cartCount" style="display: none"
+              >0</span
+            >
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-bar" id="searchBar">
+        <div class="search-inner">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar produtos, marcas, categorias..."
+            autocomplete="off"
+            aria-label="Buscar"
+          />
+          <button onclick="toggleSearch()" aria-label="Fechar busca">
+            &#x2715;
+          </button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </header>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <h3>Meu Carrinho <span id="cartItemCount">(0 itens)</span></h3>
+        <button
+          class="cart-close"
+          onclick="closeCart()"
+          aria-label="Fechar carrinho"
+        >
+          &#x2715;
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty" id="cartEmpty">
+          <svg
+            width="72"
+            height="72"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.2"
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            />
+          </svg>
+          <p>Seu carrinho está vazio</p>
+          <span>Adicione produtos para continuar</span>
+        </div>
+      </div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-coupon">
+          <input type="text" placeholder="Cupom de desconto" id="couponInput" />
+          <button onclick="applyCoupon()">Aplicar</button>
+        </div>
+        <div class="cart-summary">
+          <div class="cart-row">
+            <span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span>
+          </div>
+          <div class="cart-row">
+            <span>Frete</span
+            ><span class="free-tag" id="cartShipping">Grátis</span>
+          </div>
+          <div class="cart-row cart-total-row">
+            <span>Total</span><strong id="cartTotal">R$ 0,00</strong>
+          </div>
+        </div>
+        <button class="btn-checkout">Finalizar Compra &#x2192;</button>
+        <button class="btn-continue-shopping" onclick="closeCart()">
+          Continuar Comprando
+        </button>
+      </div>
+    </aside>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-tag">Nova Coleção 2025</div>
+        <h1>Supere seus <span>limites</span><br />com equipamento de elite</h1>
+        <p>
+          Do treino ao pódio, a SprintMax tem tudo que você precisa. Alta
+          performance para cada modalidade esportiva.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>+50k</strong><span>Clientes</span>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <strong>+1200</strong><span>Produtos</span>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <strong>4.9★</strong><span>Avaliação</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <button
+            class="btn-primary"
+            onclick="
+              document
+                .getElementById('ofertas')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Ver Produtos
+          </button>
+          <button
+            class="btn-outline"
+            onclick="
+              document
+                .getElementById('flashsale')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Flash Sale &#x26A1;
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=85"
+          alt="Tenis esportivo de alta performance"
+          class="hero-img"
+        />
+        <div class="hero-badge-discount">
+          <span>-22%</span><small>OFF</small>
+        </div>
+        <div class="hero-badge-best">&#x1F3C6; Mais Vendido</div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-dot-anim"></div>
+        <span>Role para baixo</span>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="1" y="3" width="15" height="13" rx="1" />
+          <path d="M16 8h4l3 5v3h-7V8z" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+        <div>
+          <strong>Frete Grátis</strong><small>Compras acima de R$ 299</small>
+        </div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <div><strong>Compra Segura</strong><small>Certificado SSL</small></div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="1 4 1 10 7 10" />
+          <path d="M3.51 15a9 9 0 1 0 .49-4.71" />
+        </svg>
+        <div><strong>Troca Fácil</strong><small>30 dias garantidos</small></div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="1" y="4" width="22" height="16" rx="2" />
+          <line x1="1" y1="10" x2="23" y2="10" />
+        </svg>
+        <div>
+          <strong>12x Sem Juros</strong><small>No cartão de crédito</small>
+        </div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.93 3.49a2 2 0 0 1 1.99-2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+        <div><strong>Suporte 24h</strong><small>Chat e WhatsApp</small></div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categorias">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Explore</div>
+          <h2>Compre por Categoria</h2>
+          <p>Encontre produtos para sua modalidade favorita</p>
+        </div>
+        <div class="categories-grid">
+          <div class="cat-card" onclick="setFilter('Corrida')">
+            <div class="cat-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=400&q=80"
+                alt="Corrida"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-overlay">
+              <span>👟</span><strong>Corrida</strong><small>48 produtos</small>
+            </div>
+          </div>
+          <div class="cat-card" onclick="setFilter('Futebol')">
+            <div class="cat-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80"
+                alt="Futebol"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-overlay">
+              <span>⚽</span><strong>Futebol</strong><small>63 produtos</small>
+            </div>
+          </div>
+          <div class="cat-card" onclick="setFilter('Academia')">
+            <div class="cat-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80"
+                alt="Academia"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-overlay">
+              <span>🏋️</span><strong>Academia</strong><small>91 produtos</small>
+            </div>
+          </div>
+          <div class="cat-card" onclick="setFilter('Natação')">
+            <div class="cat-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&q=80"
+                alt="Natação"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-overlay">
+              <span>🏊</span><strong>Natação</strong><small>35 produtos</small>
+            </div>
+          </div>
+          <div class="cat-card" onclick="setFilter('Ciclismo')">
+            <div class="cat-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80"
+                alt="Ciclismo"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-overlay">
+              <span>🚴</span><strong>Ciclismo</strong><small>27 produtos</small>
+            </div>
+          </div>
+          <div class="cat-card" onclick="setFilter('Basquete')">
+            <div class="cat-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&q=80"
+                alt="Basquete"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-overlay">
+              <span>🏀</span><strong>Basquete</strong><small>19 produtos</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="products" id="ofertas">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Destaque</div>
+          <h2>Produtos em Destaque</h2>
+          <p>Os mais vendidos desta semana</p>
+        </div>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">Todos</button>
+          <button class="filter-tab" data-filter="Corrida">Corrida</button>
+          <button class="filter-tab" data-filter="Futebol">Futebol</button>
+          <button class="filter-tab" data-filter="Academia">Academia</button>
+          <button class="filter-tab" data-filter="Natacao">Natação</button>
+          <button class="filter-tab" data-filter="Tenis">Tênis</button>
+          <button class="filter-tab" data-filter="Ciclismo">Ciclismo</button>
+          <button class="filter-tab" data-filter="Basquete">Basquete</button>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="load-more-wrap">
+          <button class="btn-load-more">Ver todos os produtos &#x2192;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLASH SALE -->
+    <section class="flash-sale" id="flashsale">
+      <div class="container">
+        <div class="flash-header">
+          <div class="flash-title">
+            <div class="flash-label">&#x26A1; Flash Sale</div>
+            <h2>Oferta por tempo limitado!</h2>
+          </div>
+          <div class="countdown" id="countdown">
+            <div class="time-block">
+              <span id="cdHours">08</span><small>Horas</small>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-block">
+              <span id="cdMinutes">45</span><small>Min</small>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-block">
+              <span id="cdSeconds">00</span><small>Seg</small>
+            </div>
+          </div>
+        </div>
+        <div class="flash-products">
+          <div class="flash-card">
+            <div class="flash-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"
+                alt="Tenis AeroRun Pro"
+                loading="lazy"
+              />
+              <span class="flash-badge">-30%</span>
+            </div>
+            <div class="flash-info">
+              <span class="flash-cat">Corrida</span>
+              <h4>Tênis AeroRun Pro 2025</h4>
+              <div class="stars-row">
+                &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                <small>(124 avaliações)</small>
+              </div>
+              <div class="flash-price-row">
+                <span class="price-old-sm">R$ 499,90</span>
+                <span class="price-current-lg">R$ 349,90</span>
+              </div>
+              <div class="stock-bar-wrap">
+                <div class="stock-bar">
+                  <div class="stock-fill" style="width: 73%"></div>
+                </div>
+                <small>Restam apenas 27 unidades</small>
+              </div>
+              <button
+                class="btn-flash"
+                onclick="
+                  addToCart(
+                    'Tenis AeroRun Pro',
+                    349.9,
+                    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200',
+                    'Corrida',
+                  )
+                "
+              >
+                Comprar Agora
+              </button>
+            </div>
+          </div>
+          <div class="flash-card">
+            <div class="flash-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&q=80"
+                alt="Kit Halteres Pro"
+                loading="lazy"
+              />
+              <span class="flash-badge">-25%</span>
+            </div>
+            <div class="flash-info">
+              <span class="flash-cat">Academia</span>
+              <h4>Kit Halteres Pro 20kg</h4>
+              <div class="stars-row">
+                &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;
+                <small>(87 avaliações)</small>
+              </div>
+              <div class="flash-price-row">
+                <span class="price-old-sm">R$ 380,00</span>
+                <span class="price-current-lg">R$ 284,90</span>
+              </div>
+              <div class="stock-bar-wrap">
+                <div class="stock-bar">
+                  <div class="stock-fill" style="width: 55%"></div>
+                </div>
+                <small>Restam apenas 45 unidades</small>
+              </div>
+              <button
+                class="btn-flash"
+                onclick="
+                  addToCart(
+                    'Kit Halteres Pro 20kg',
+                    284.9,
+                    'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=200',
+                    'Academia',
+                  )
+                "
+              >
+                Comprar Agora
+              </button>
+            </div>
+          </div>
+          <div class="flash-card">
+            <div class="flash-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1623874514711-0f321325f318?w=500&q=80"
+                alt="Raquete Control 300"
+                loading="lazy"
+              />
+              <span class="flash-badge">-20%</span>
+            </div>
+            <div class="flash-info">
+              <span class="flash-cat">Tênis</span>
+              <h4>Raquete Control 300</h4>
+              <div class="stars-row">
+                &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+                <small>(56 avaliações)</small>
+              </div>
+              <div class="flash-price-row">
+                <span class="price-old-sm">R$ 420,00</span>
+                <span class="price-current-lg">R$ 336,00</span>
+              </div>
+              <div class="stock-bar-wrap">
+                <div class="stock-bar">
+                  <div class="stock-fill" style="width: 40%"></div>
+                </div>
+                <small>Restam apenas 60 unidades</small>
+              </div>
+              <button
+                class="btn-flash"
+                onclick="
+                  addToCart(
+                    'Raquete Control 300',
+                    336.0,
+                    'https://images.unsplash.com/photo-1623874514711-0f321325f318?w=200',
+                    'Tenis',
+                  )
+                "
+              >
+                Comprar Agora
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO BANNERS -->
+    <section class="promo-section">
+      <div class="promo-card promo-orange">
+        <div class="promo-content">
+          <span class="promo-tag">Até 40% OFF</span>
+          <h3>Coleção de Verão</h3>
+          <p>Roupas e acessórios para a temporada</p>
+          <button class="btn-promo">Ver Coleção &#x2192;</button>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=400&q=80"
+          alt="Colecao de Verao"
+          loading="lazy"
+        />
+      </div>
+      <div class="promo-card promo-dark">
+        <div class="promo-content">
+          <span class="promo-tag">Novidade</span>
+          <h3>Monte sua Academia</h3>
+          <p>Equipamentos profissionais para casa</p>
+          <button class="btn-promo">Explorar &#x2192;</button>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80"
+          alt="Equipamentos Academia"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- BRANDS SCROLL -->
+    <section class="brands">
+      <div class="brands-label">Marcas Oficiais</div>
+      <div class="brands-track-wrap">
+        <div class="brands-track">
+          <span class="brand-item">Nike</span>
+          <span class="brand-item">Adidas</span>
+          <span class="brand-item">Puma</span>
+          <span class="brand-item">Under Armour</span>
+          <span class="brand-item">New Balance</span>
+          <span class="brand-item">Wilson</span>
+          <span class="brand-item">Speedo</span>
+          <span class="brand-item">Everlast</span>
+          <span class="brand-item">Penalty</span>
+          <span class="brand-item">Mizuno</span>
+          <span class="brand-item">Nike</span>
+          <span class="brand-item">Adidas</span>
+          <span class="brand-item">Puma</span>
+          <span class="brand-item">Under Armour</span>
+          <span class="brand-item">New Balance</span>
+          <span class="brand-item">Wilson</span>
+          <span class="brand-item">Speedo</span>
+          <span class="brand-item">Everlast</span>
+          <span class="brand-item">Penalty</span>
+          <span class="brand-item">Mizuno</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Depoimentos</div>
+          <h2>O que nossos clientes dizem</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+            </div>
+            <p>
+              "Produtos de excelente qualidade! Recebi o tênis em 2 dias e ficou
+              melhor do que esperava. Já é a terceira compra na SprintMax."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div>
+                <strong>Marcos Ribeiro</strong><small>Corredor amador</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+            </div>
+            <p>
+              "Atendimento incrível! Tive um problema com o tamanho e resolveram
+              em menos de 24 horas. Troca super fácil. Recomendo muito!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AC</div>
+              <div>
+                <strong>Ana Clara</strong><small>Personal Trainer</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;
+            </div>
+            <p>
+              "Os preços são imbatíveis e a variedade é enorme. Encontrei tudo
+              para o meu kit de natação em um único lugar. Sensacional!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">LF</div>
+              <div><strong>Lucas Ferreira</strong><small>Nadador</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">✉️</div>
+        <div class="newsletter-text">
+          <h2>Fique por dentro das novidades</h2>
+          <p>
+            Receba ofertas exclusivas, lançamentos e dicas esportivas direto no
+            e-mail.
+          </p>
+        </div>
+        <form
+          class="newsletter-form"
+          onsubmit="subscribeNewsletter(event)"
+          novalidate
+        >
+          <input
+            type="email"
+            placeholder="Seu melhor e-mail..."
+            required
+            aria-label="E-mail para newsletter"
+          />
+          <button type="submit">Quero Descontos!</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="36" height="36" viewBox="0 0 42 42" fill="none">
+              <circle cx="21" cy="21" r="21" fill="#e8501a" />
+              <path
+                d="M10 26 C14 18, 20 15, 26 18 C30 20, 32 16, 34 14"
+                stroke="white"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <circle cx="21" cy="21" r="4.5" fill="white" />
+            </svg>
+            <span>Sprint<strong>Max</strong></span>
+          </div>
+          <p>
+            Sua loja de artigos esportivos com os melhores preços e qualidade
+            garantida. Equipando atletas desde 2015.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/5511999999999"
+              class="social-link"
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Produtos</h4>
+          <ul>
+            <li><a href="#">Corrida</a></li>
+            <li><a href="#">Futebol</a></li>
+            <li><a href="#">Academia</a></li>
+            <li><a href="#">Natação</a></li>
+            <li><a href="#">Ciclismo</a></li>
+            <li><a href="#">Tênis de Quadra</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog Esportivo</a></li>
+            <li><a href="#">Trabalhe conosco</a></li>
+            <li><a href="#">Imprensa</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Meus Pedidos</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Rastrear Pedido</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2025 SprintMax. Todos os direitos reservados. CNPJ:
+          00.000.000/0001-00
+        </p>
+        <div class="payment-badges">
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Master</span>
+          <span class="pay-badge">Pix</span>
+          <span class="pay-badge">Boleto</span>
+          <span class="pay-badge">Amex</span>
+          <span class="pay-badge">ELO</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING -->
+    <a
+      href="https://wa.me/5511999999999"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <script src="app.js"></script>
+  </body>
 </html>
